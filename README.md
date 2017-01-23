@@ -1,7 +1,9 @@
 # Two-6-Mafia
 Main repository for CS 2340 Team 26.
 
-Team Members: Jaramillo, Rebekah (rjaramillo3)
+Team Members: 
+
+Jaramillo, Rebekah (rjaramillo3)
 
 Long, Jonathan (jlong68)
 
