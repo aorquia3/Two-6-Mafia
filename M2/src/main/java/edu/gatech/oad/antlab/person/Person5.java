@@ -10,7 +10,7 @@ package edu.gatech.oad.antlab.person;
  */
 public class Person5 {
   /** Holds the persons real name */
-  private String name; // Tricia
+  private String name;
   	/**
 	 * The constructor, takes in the persons
 	 * name
@@ -30,8 +30,10 @@ public class Person5 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-	  //Person 5 put your implementation here
-	  return null;
+		String subString1 = input.substring(2, input.length());
+		String subString2 = input.substring(0, 1);
+		String output = subString1 + subString2;
+		return output;
 	}
 	
 	/**
