@@ -1,8 +1,8 @@
 //Do plugins
 apply plugin: 'java'
 
-//Default is make a jar
-defaultTasks 'jar'
+//Default is clean up workspace and make a jar
+defaultTasks 'clean', 'jar', 'javadoc', 'compileTest'
 //Variable for the sake of testing
 version = '1.42'
 
@@ -11,13 +11,17 @@ jar {
 	manifest {
 		attributes 'Implementation-Title' : 'Aorquia3 Gradle' ,
     		'Implementation-Version' : version ,
-    		'Main-Class' : '/edu/gatech/oad/antlab/pkg1/AntLabMain' ,
-			'Class-Path' : '../../../lib/resources.jar'
+    		'Main-Class' : 'edu/gatech/oad/antlab/pkg1/AntLabMain' ,
+			'Class-Path' : '../../lib/resources.jar'
 	}
-	destinationDir = file("./jars")
+	destinationDir = file("build/radical_jars")
     archiveName = 'gradlepls.jar'
 }
 
+task talkToMe {
+	println 'I\'m Gradle and I\'m doing stuff.'
+}
+
 dependencies {
-	compile files ('/lib/resources.jar')
+	compile files ('lib/resources.jar')
 }

@@ -33,7 +33,7 @@ public class Person2 {
 	  //Person 2 put your implementation here
 	  char[] text = input.toCharArray();
 	  for(int i = 0; i < text.length; i++) {
-	  	int randChar = (int)(Math.randon() * text.length);
+	  	int randChar = (int)(Math.random() * text.length);
 		char tempChar = text[i];
 		text[i] = text[randChar];
 		text[randChar] = tempChar;
