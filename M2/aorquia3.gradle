@@ -19,9 +19,10 @@ jar {
 }
 
 task talkToMe {
-	println 'I\'m Gradle and I\'m doing stuff.'
+	println 'I\'m Gradle and I\'m doing stuff. Like, uh, Java stuff.'
 }
 
+//Turns out that this must be specified in order to create all the class files, since AntLabMain depends on an external jar.
 dependencies {
 	compile files ('lib/resources.jar')
 }
