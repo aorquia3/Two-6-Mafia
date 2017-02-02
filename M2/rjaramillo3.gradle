@@ -1,4 +1,4 @@
-apply plugins: 'java'
+apply plugin`: 'java'
 
 defaultTasks 'clean', 'jar', 'javadoc', 'compile teat'
 
