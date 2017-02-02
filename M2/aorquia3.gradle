@@ -1,0 +1,23 @@
+//Do plugins
+apply plugin: 'java'
+
+//Default is make a jar
+defaultTasks 'jar'
+//Variable for the sake of testing
+version = '1.42'
+
+
+jar {
+	manifest {
+		attributes 'Implementation-Title' : 'Aorquia3 Gradle' ,
+    		'Implementation-Version' : version ,
+    		'Main-Class' : '/edu/gatech/oad/antlab/pkg1/AntLabMain' ,
+			'Class-Path' : '../../../lib/resources.jar'
+	}
+	destinationDir = file("./jars")
+    archiveName = 'gradlepls.jar'
+}
+
+dependencies {
+	compile files ('/lib/resources.jar')
+}
