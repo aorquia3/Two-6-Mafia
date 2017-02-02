@@ -9,15 +9,22 @@ version = '1.42'
 
 jar {
 	manifest {
+		//Don't know where this title comes into play.
 		attributes 'Implementation-Title' : 'Aorquia3 Gradle' ,
+		//Version should use previous variable.
     		'Implementation-Version' : version ,
+		//This is the location of the main class within src/main/java/
     		'Main-Class' : 'edu/gatech/oad/antlab/pkg1/AntLabMain' ,
+		//This is the class path that the NEW JAR will use relative to its location, so if you
+		//change the destinationDir this will need to be modified. 
 			'Class-Path' : '../../lib/resources.jar'
 	}
+	//Where stuff should go and what it should be called.
 	destinationDir = file("build/radical_jars")
-    archiveName = 'gradlepls.jar'
+    	archiveName = 'gradlepls.jar'
 }
 
+//Made a task just to see.
 task talkToMe {
 	println 'I\'m Gradle and I\'m doing stuff. Like, uh, Java stuff.'
 }
